@@ -1,0 +1,74 @@
+body {
+	background-color: darkblue;
+	color: white;
+	font-family: serif;
+}
+@keyframes spin{ /* cohost combatibility animation */
+  100%{
+	transform:rotate(360deg)
+  }
+}
+.layout{
+  display:flex;
+}
+.mobilewarning{
+  color:red;
+  height:64px;
+  background-color:#fff2ce;
+  position:absolute;
+  z-index:999;
+}
+@media (min-width: 550px){
+  .mobilewarning{
+	height:0px;
+	width:0px;
+	opacity:0;
+	font-size:0;
+	top:-999px;
+  }
+}
+.topdiv{
+  margin:0;
+  height:64px;
+  background-color:#fff2ce;
+  color:black;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  align-content:flex-start;
+}
+.topdiv h1{
+  margin:0
+}
+.infomenu{
+  background-color:grey;
+  border-bottom:4px ridge #fff2ce;
+  width:100%;
+  height:394px;
+}
+.playback{
+  height:32px;
+  background-color:grey;
+  border-bottom:4px ridge #fff2ce;
+}
+.timeline{
+  height:400px;
+  background-color:gray;
+}
+.projector{
+  width:390px;
+  height:390px;
+  background-color:white;
+  position:absolute;
+  right:0;
+  border-left:4px ridge #fff2ce;
+  border-bottom:4px ridge #fff2ce;
+  overflow:hidden;
+  font-family:Atkinson Hyperlegible;
+}
+.flacss-obj{
+  color:black;
+  position:absolute;
+}
