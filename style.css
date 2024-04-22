@@ -2,6 +2,7 @@ body {
 	background-color: darkblue;
 	color: white;
 	font-family: serif;
+	margin:0;
 }
 @keyframes spin{ /* cohost combatibility animation */
   100%{
