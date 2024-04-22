@@ -5,45 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlaCSS Editor</title>
     <link href="./style.css" rel="stylesheet" type="text/css" media="all">
-    <script>
-    movie = {
-      title: "FlaCSS Movie",
-      description: "Default Template",
-      scenes: [ //scene list
-        [ //scene object list
-          { //scene object
-            html:"<span style='font-size:24px'>Welcome to FlaCSS</span>", //html inside object 
-            objx:100, //object x position
-            objy:100, //object y position (0,0 = top left)
-            objstart:1, //object spawn time
-            keyframes:[ //keyframe list
-              { //keyframe
-                keytype:"transform",
-                keystart:2,
-                keyend:4,
-                
-                transform:"translate",
-                transformvalue:[200,200], //movement is relative 
-                easing:"ease-in",
-              }, //keyframe end
-              {
-                keytype:"transform",
-                keystart:2,
-                keyend:4,
-                transform:"rotate",
-                transformvalue:360,
-                easing:"ease-in",
-              },
-            ], //keyframe list end
-          }, //scene object end
-          
-        ], //scene object list end
-      ], //scene list end
-      createScene() {
-        
-      }
-    }
-    </script>
+    <script ref="./scripts/editor.js"></script>
   </head>
   <body style="margin:0">
     <div class=mobilewarning><h1>YOUR DEVICE IS TOO SMALL. GET A BIGGER ONE</h1></div>
