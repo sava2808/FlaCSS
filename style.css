@@ -46,8 +46,8 @@ body {
 .infomenu{ /* area for object-specific info (like keyframes)*/
   background-color:grey;
   border-bottom:4px ridge #fff2ce;
-  width:100%;
-  height:394px;
+  width:calc(100% - 390px);
+  height:390px;
 }
 .playback{ /* area for play button and other buttons */
   height:32px;
