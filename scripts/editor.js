@@ -18,17 +18,23 @@ movie = { // the 'movie' to convert and play back
             transformvalue:[200,200], //translation is relative 
             easing:"ease-in", //built in css animation easing functions
           }, //keyframe end
-          {
-            keytype:"transform",
+          /*{ 
+            keytype:"fade",
             keystart:2,
             keyend:4,
-            transform:"rotate",
-            transformvalue:360,
+            fadedir:1, //1 = fade in; 0 = fade out
             easing:"ease-in",
-          },
+          },*/ //this doesn't work, the cohost go animations (https://cohost.org/blep/post/5112453--) cant have their transform changed :( if someone can fix this lemme know
         ], //keyframe list end
       }, //scene object end
       
     ], //scene object list end
   ], //scene list end
+}
+template = `<div style="display:flex;justify-content:center">
+<div style='width:390px;height:390px;background-color:white;overflow:hidden;'>
+</div>
+</div>`
+function createPlayback(mov) {
+result = ""
 }
