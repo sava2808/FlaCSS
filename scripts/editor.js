@@ -24,7 +24,9 @@ movie = { // the 'movie' to convert and play back
             keyend:4,
             fadedir:1, //1 = fade in; 0 = fade out
             easing:"ease-in",
-          },*/ //this doesn't work, the cohost go animations (https://cohost.org/blep/post/5112453--) cant have their transform changed :( if someone can fix this lemme know
+          },*/ //this doesn't work, the cohost go animations (https://cohost.org/blep/post/5112453--)
+               //cant have their transform changed by css :( 
+               //if someone can fix this lemme know 
         ], //keyframe list end
       }, //scene object end
       
@@ -36,5 +38,5 @@ template = `<div style="display:flex;justify-content:center">
 </div>
 </div>`
 function createPlayback(mov) {
-result = ""
+  result = ""
 }
