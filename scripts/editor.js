@@ -37,6 +37,6 @@ template = `<div style="display:flex;justify-content:center">
 <div style='width:390px;height:390px;background-color:white;overflow:hidden;'>
 </div>
 </div>`
-function createPlayback(mov) {
-  result = ""
+function createPreview() {
+  getElementByClassName("projector").innerHTML = "<div style='position:absolute;left:0;up:0;'><img src='images/flacss_logo.png'></div>"
 }
