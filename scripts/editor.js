@@ -38,5 +38,5 @@ template = `<div style="display:flex;justify-content:center">
 </div>
 </div>`
 function createPreview() {
-  getElementsByClassName("projector")[0].innerHTML = "<div style='position:absolute;left:0;up:0;'><img src='images/flacss_logo.png'></div>"
+  getElementById("projector").innerHTML = "<div style='position:absolute;left:0;up:0;'><img src='images/flacss_logo.png'></div>"
 }
