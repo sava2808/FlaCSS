@@ -5,6 +5,15 @@ proof of concept: https://cohost.org/glumbocorp/post/5699308--/333256f736fa4fee8
 
 this is my first github project :3 
 
+simple todo:
+- put stuff inside projector with button press 
+- change preview based on \<select> & \<input> value
+- create select ui
+- create object properties
+  * position
+  * start time
+  * end time
+
 todo:
 - editor:
   * scene view
