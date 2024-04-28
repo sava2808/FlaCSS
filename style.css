@@ -53,6 +53,15 @@ body {
   height:32px;
   background-color:grey;
   border-bottom:4px ridge #fff2ce;
+	display:flex;
+	flex-direction:row-reverse;
+	padding-right:64px;
+}
+.playback button{
+	appearance:none;
+	width:32px;
+	height:32px;
+	padding:0;
 }
 .timeline{ /* area for timing keyframes and scenes */
   height:400px;
