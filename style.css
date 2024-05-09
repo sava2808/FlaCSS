@@ -46,8 +46,22 @@ body {
 .infomenu{ /* area for object-specific info (like keyframes)*/
   background-color:grey;
   border-bottom:4px ridge #fff2ce;
-  width:calc(100% - 390px);
+  width:calc(100% - 394px);
   height:390px;
+  position:relative;
+}
+.infomenu button{
+  appearance:none;
+  padding:0;
+  position:absolute;
+  right:0;
+  bottom:0;
+}
+p{margin:0;font-family:MS Gothic}
+.obj-info{
+  background-color:#aaa;
+  border-radius:8px;
+  padding:8px;
 }
 .playback{ /* area for play button and other buttons */
   height:32px;
@@ -68,9 +82,7 @@ body {
   background-color:gray;
 }
 .projector{ /* area for previewing the 'movie' */
-  width:390px; /* 381px is the ACTUAL minimum width of a cohost post rather than 390px,
-	because of a small imperfection with the website's window resizing, but i'll keep it 390px 
-	because its basically imperceptible */
+  width:390px; /* 381px is the ACTUAL minimum width of a cohost post */
   height:390px;
   background-color:white;
   position:absolute;

@@ -6,12 +6,17 @@
     <title>FlaCSS Editor</title>
     <link href="./style.css" rel="stylesheet" type="text/css" media="all">
     <script src="./scripts/editor.js"></script>
+	<script src="./scripts/parse.js"></script>
   </head>
-  <body>
+  <body onload="updateInfoMenu()">
     <div class=mobilewarning><h1>YOUR DEVICE IS TOO SMALL. GET A BIGGER ONE</h1></div>
 	<div class=topdiv><img src="images/flacss_logo.png"><h1>FlaCSS Editor</h1> <span>"It's pronounced Flacks"</span></div>
 	<div class=layout>
-		<div class=infomenu></div>
+		<div class=infomenu><div class="obj-info">
+		<p>Start X <input id=objx onchange="updateEditing(this,'object')"></p>
+		<p>Start Y <input id=objy onchange="updateEditing(this,'object')"></p>
+		<p>Inner HTML <input id=html onchange="updateEditing(this,'object')"></p>
+		</div><button onclick="saveChanges()">save changes</button></div>
 		<div class=projector id=projector></div>
 	</div>
     <div class=playback><button onclick="createPreview()"><img src="images/flacss_play_small.png"></button></div>
