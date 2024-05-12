@@ -14,8 +14,8 @@ simple todo:
 - create object properties
   * ✔️ position
   * ✔️ inner html
-  * start time (these 2 will need animations)
-  * end time
+  * ✔️ start time (these 2 will need animations)
+  * ✔️ end time
 - create more than 1 object
 - switch editing between those objects
 
