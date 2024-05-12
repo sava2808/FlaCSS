@@ -11,7 +11,8 @@ movietemplate = { // the (default) 'movie' to convert and play back
 			html:"<span style='font-size:24px'>Welcome to FlaCSS</span>", //html inside object 
 			objx:100, //object starting x position
 			objy:100, //object starting y position (0,0 = top left)
-			objstart:1, //object spawn time (seconds)
+			objstart:1, //object spawning time (seconds)
+			objend:6, //object despawning time (seconds)
 			keyframes:[ //keyframe list
 			  { //keyframe
 				keytype:"transform",
@@ -44,18 +45,38 @@ movie = {
   description: "Test",
   scenes:[
 	{
-		objects:[{html:"<img src='images/flacss_logo.png'>",objx:0,objy:0,}]
+		objects:[{
+		html:"<img src='images/flacss_logo.png'>",objx:0,objy:0,objstart:1,objend:3,
+		keyframes:[{},{}]
+		}]
 	}
   ]
 }
+// function keySort(a,b){
+  // tr_priority = {translate:1,translate3d:1,rotate:2,rotate3d:2,scale:3}
+  // if (a.keytype == "transform") {
+	  // an = tr_priority[a.transform]
+  // }
+  // if (b.keytype == "transform") {
+	  // bn = tr_priority[b.transform]
+  // }
+// }
 function createPreview() { //create projector preview 
   proj = document.getElementsByClassName("projector")[0]
   proj.innerHTML = "" //reset
   for (scene of movie.scenes) {
 	  for (object of scene.objects) {
+		  //keylayers = []
+		  //keysort = object.keyframes
+		  //keysort.sort()
 		  obj = document.createElement("div")
 		  obj.innerHTML = object.html
-		  obj.style = `position:absolute;left:${object.objx}px;top:${object.objy}px` // i keep confusing top with up lol
+		  obj.style = `position:absolute;left:${object.objx}px;top:${object.objy}px;transform:rotatex(90deg);animation:${object.objend - object.objstart}s step-start ${object.objstart}s spin reverse`
+		  // for (let i=0;i<keylayers.length-1;i++) {
+			  // keylayers[i+1].appendChild(keylayers[i])
+		  // }
+		  // keylayers.at(-1).appendChild(obj) //why must i use .at instead of [] 
+		  // proj.appendChild(keylayers.at(-1))
 		  proj.appendChild(obj)
 	  }
   }
