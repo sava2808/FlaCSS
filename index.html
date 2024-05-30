@@ -9,18 +9,31 @@
 	<script src="./scripts/parse.js"></script>
   </head>
   <body onload="updateInfoMenu()">
-    <div class=mobilewarning><h1>YOUR DEVICE IS TOO SMALL. GET A BIGGER ONE</h1></div>
+    <div class=mobilewarning><h1>FLACSSERROR;;<br>SCREEN WIDTH TOO SMALL;;<br>GET A DIFFERENT DEVICE OR MAKE THIS SCREEN WIDER;;<br>ENDMESSAGE;;</h1></div>
 	<div class=topdiv><img src="images/flacss_logo.png"><h1>FlaCSS Editor</h1> <span>"It's pronounced Flacks"</span></div>
 	<div class=layout>
-		<div class=infomenu><div class="obj-info">
+		<div class=infomenu><div class=obj-info>
+		<p class=title>OBJECT::</p>
+		<hr>
 		<p>Start X <input id=objx onchange="updateEditing(this,'object')"></p>
 		<p>Start Y <input id=objy onchange="updateEditing(this,'object')"></p>
 		<p>Inner HTML <input id=html onchange="updateEditing(this,'object')"></p>
-		<p>Start Time <input id=objstart onchange="updateEditing(this,'object')"> End Time <input id=objend onchange="updateEditing(this,'object')"></p>
-		</div><button onclick="saveChanges()">save changes</button></div>
+		<p>Start Time <input class=input-small id=objstart onchange="updateEditing(this,'object')"> End Time <input class=input-small id=objend onchange="updateEditing(this,'object')"></p>
+		</div>
+		<div class=create>
+		<div class=create-details closed>
+		<button id=keyframe title="Create keyframe" onclick="createThing(this.id)">X</button>
+		<button id=object title="Create object" onclick="createThing(this.id)"><img src="images/flacss_create_obj.png"></button>
+		<button id=scene title="Create scene" onclick="createThing(this.id)">X</button>
+		</div>
+		<button id=dropdown title="Create" onclick="createThing(this.id)">+</button>
+		</div>
+		</div>
 		<div class=projector id=projector></div>
 	</div>
-    <div class=playback><button onclick="createPreview()"><img src="images/flacss_play_small.png"></button></div>
-    <div class=timeline></div>
+    <div class=playback><button title="Play movie" onclick="createPreview()"><img src="images/flacss_play_small.png"></button></div>
+    <div class=timeline>
+	<p>Editing Object Index <input class=input-small id=objindex onchange="editor.obj = this.value;updateInfoMenu()" value=0></p>
+	</div>
   </body>
 </html>
